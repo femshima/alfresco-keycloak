@@ -69,11 +69,11 @@
         <moduleId>acosix-keycloak</moduleId>
 
         <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.target>11</maven.compiler.target>
 
         <maven.shade.version>3.2.4</maven.shade.version>
 
-        <keycloak.version>16.1.0</keycloak.version>
+        <keycloak.version>17.0.0</keycloak.version>
         <resteasy.version>3.15.1.Final</resteasy.version>
         <!-- lowest common denominator of Repository / Share in 6.0 -->
         <apache.httpclient.version>4.5.13</apache.httpclient.version>
