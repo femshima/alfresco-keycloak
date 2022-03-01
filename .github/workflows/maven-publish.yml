@@ -49,7 +49,10 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
-    - name: Publish to GitHub Packages Apache Maven
-      run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
+
+    - name: Setup semantic-release
+      run: npm install -g @conveyal/maven-semantic-release@v4.5.0 semantic-release@15 @semantic-release/exec@v3.3.8
+    - name: Release
+      run: semantic-release --branch master --use-conveyal-workflow --skip-maven-deploy
       env:
-        GITHUB_TOKEN: ${{ github.token }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
